@@ -1,0 +1,787 @@
+
+<div class="integradora-web">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+.integradora-web {
+    --bg: #10121b;
+    --surface: #191d2b;
+    --surface2: #202638;
+    --purple: #a78bfa;
+    --blue: #60a5fa;
+    --green: #34d399;
+    --text: #e8eaf2;
+    --muted: #a3aabd;
+    --border: #30384c;
+    color: var(--text);
+    background: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.integradora-web * {
+    box-sizing: border-box;
+}
+
+.integradora-web h1,
+.integradora-web h2,
+.integradora-web h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.25;
+}
+
+.integradora-web .hero {
+    padding: 48px 30px;
+    background: linear-gradient(135deg, #252044, #172b48 65%, #172039);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.integradora-web .eyebrow {
+    color: #c4b5fd;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.integradora-web .hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    color: white;
+    margin: 15px 0;
+    font-weight: 800;
+}
+
+.integradora-web .hero h1 span {
+    color: var(--purple);
+}
+
+.integradora-web .hero p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #d1d5e5;
+    font-size: 16px;
+}
+
+.integradora-web .hero-tag {
+    display: inline-block;
+    margin-top: 22px;
+    background: #ffffff16;
+    border: 1px solid #ffffff30;
+    padding: 7px 15px;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.integradora-web .content {
+    padding: 30px;
+}
+
+.integradora-web .intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.integradora-web .info-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 17px;
+    border-radius: 12px;
+}
+
+.integradora-web .info-card .icon {
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.integradora-web .info-card strong {
+    display: block;
+    color: white;
+    font-size: 14px;
+}
+
+.integradora-web .info-card small {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.integradora-web .section {
+    margin: 35px 0;
+}
+
+.integradora-web .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.integradora-web .number {
+    background: #8b5cf626;
+    color: #c4b5fd;
+    border: 1px solid #8b5cf655;
+    border-radius: 9px;
+    padding: 6px 11px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.integradora-web h2 {
+    font-size: 23px;
+    margin: 0;
+    color: white;
+}
+
+.integradora-web h3 {
+    color: #c4b5fd;
+    font-size: 16px;
+    margin: 18px 0 9px;
+}
+
+.integradora-web p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.integradora-web ul,
+.integradora-web ol {
+    padding-left: 23px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.integradora-web li {
+    padding: 3px 0;
+}
+
+.integradora-web strong {
+    color: #f0f0fa;
+}
+
+.integradora-web .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.integradora-web .panel p:first-child {
+    margin-top: 0;
+}
+
+.integradora-web .highlight {
+    border-left: 4px solid var(--purple);
+    background: #8b5cf612;
+    padding: 15px 18px;
+    border-radius: 0 10px 10px 0;
+    margin: 18px 0;
+}
+
+.integradora-web .highlight p {
+    margin: 0;
+}
+
+.integradora-web .warning {
+    border-left: 4px solid #fbbf24;
+    background: #fbbf2410;
+    padding: 15px 18px;
+    border-radius: 0 10px 10px 0;
+    margin: 18px 0;
+}
+
+.integradora-web .warning p {
+    margin: 0;
+}
+
+.integradora-web .codebox {
+    background: #0b0e17;
+    border: 1px solid var(--border);
+    padding: 17px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 12px 0;
+    color: #a5d6ff;
+    font-size: 13px;
+    font-family: monospace;
+    line-height: 1.8;
+    white-space: pre;
+}
+
+.integradora-web .folder {
+    color: #c4b5fd;
+    font-family: monospace;
+}
+
+.integradora-web .folder-file {
+    color: #a5d6ff;
+    font-family: monospace;
+}
+
+.integradora-web .folder-comment {
+    color: #8c97ab;
+    font-family: monospace;
+}
+
+.integradora-web .tag {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #60a5fa18;
+    color: #93c5fd;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 2px;
+    font-family: monospace;
+}
+
+.integradora-web .tag.purple {
+    background: #a78bfa18;
+    color: #c4b5fd;
+}
+
+.integradora-web .tag.green {
+    background: #34d39918;
+    color: #6ee7b7;
+}
+
+.integradora-web .two-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 13px;
+}
+
+.integradora-web .criteria {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.integradora-web .criteria th {
+    background: #292d42;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+.integradora-web .criteria td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.integradora-web .criteria td:last-child {
+    text-align: center;
+    color: #c4b5fd;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.integradora-web .criteria tr:last-child td {
+    color: white;
+    font-weight: 800;
+}
+
+.integradora-web .checklist {
+    list-style: none;
+    padding: 0;
+}
+
+.integradora-web .checklist li {
+    padding: 10px 12px;
+    margin: 7px 0;
+    background: var(--surface2);
+    border-radius: 8px;
+    color: var(--text);
+}
+
+.integradora-web .checklist li::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.integradora-web .footer {
+    background: #171a28;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.integradora-web .footer strong {
+    color: var(--purple);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.integradora-web .footer p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+@media(max-width:600px) {
+    .integradora-web .content {
+        padding: 19px;
+    }
+    .integradora-web .hero {
+        padding: 35px 20px;
+    }
+    .integradora-web h2 {
+        font-size: 19px;
+    }
+    .integradora-web .criteria {
+        font-size: 11px;
+    }
+    .integradora-web .criteria th,
+    .integradora-web .criteria td {
+        padding: 8px 6px;
+    }
+}
+</style>
+
+<header class="hero">
+    <div class="eyebrow">TAEV · Programación Web</div>
+    <h1>Integradora <span>II.</span></h1>
+    <h2 style="color:#d1d5e5;font-size:21px;margin-top:0;">Desarrollo de un sitio web</h2>
+    <p>De la idea al navegador: construye, diseña y publica tu propio sitio web utilizando HTML, CSS y los conocimientos adquiridos durante el curso.</p>
+    <div class="hero-tag">PROYECTO INTEGRADOR · HTML + CSS · GITHUB PAGES</div>
+</header>
+
+<div class="content">
+
+    <div class="intro-grid">
+        <div class="info-card">
+            <div class="icon">🌐</div>
+            <strong>Proyecto libre</strong>
+            <small>La temática la eliges tú.</small>
+        </div>
+        <div class="info-card">
+            <div class="icon">📄</div>
+            <strong>3 páginas HTML</strong>
+            <small>Un sitio web relacionado y completo.</small>
+        </div>
+        <div class="info-card">
+            <div class="icon">🎨</div>
+            <strong>HTML + CSS</strong>
+            <small>Estructura, diseño y personalización.</small>
+        </div>
+        <div class="info-card">
+            <div class="icon">🚀</div>
+            <strong>GitHub Pages</strong>
+            <small>Tu proyecto publicado en Internet.</small>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">01</span>
+            <h2>El reto</h2>
+        </div>
+
+        <p>Desarrollarás un sitio web de temática libre, utilizando los conocimientos de HTML y CSS que hemos trabajado durante el curso.</p>
+
+        <p>Podrás elegir cualquier temática que te interese: un videojuego, una película, una banda musical, un negocio, una tienda, una institución, un portafolio personal, una comunidad, un proyecto ficticio o cualquier otra idea que quieras convertir en un sitio web.</p>
+
+        <div class="highlight">
+            <p><strong>El objetivo:</strong> construir un sitio web que tenga identidad propia, contenido organizado, navegación entre páginas, diseño visual personalizado y que pueda consultarse públicamente desde Internet.</p>
+        </div>
+
+        <p>No se trata de hacer tres páginas independientes sin relación entre ellas. Las tres deberán formar parte de un mismo proyecto y mantener una identidad visual coherente.</p>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">02</span>
+            <h2>Requisitos del sitio</h2>
+        </div>
+
+        <div class="panel">
+            <h3>📄 A. Estructura y contenido</h3>
+            <ul>
+                <li>El sitio deberá contar con un mínimo de <strong>3 páginas HTML independientes</strong>.</li>
+                <li>La página principal deberá llamarse obligatoriamente <strong>index.html</strong>.</li>
+                <li>Las páginas deberán estar relacionadas con una misma temática.</li>
+                <li>Implementar un menú o sistema de navegación para desplazarse entre ellas.</li>
+                <li>Mantener una identidad visual consistente en todas las páginas.</li>
+                <li>Incluir contenido real y organizado, no únicamente elementos decorativos.</li>
+                <li>Utilizar imágenes y otros recursos multimedia cuando sean pertinentes.</li>
+            </ul>
+
+            <p><strong>Ejemplo de distribución:</strong></p>
+            <div class="two-columns">
+                <div>
+                    <span class="tag purple">Página 1</span>
+                    <p><strong>Inicio:</strong> presentación del proyecto, introducción y contenido destacado.</p>
+                </div>
+                <div>
+                    <span class="tag purple">Página 2</span>
+                    <p><strong>Contenido:</strong> información, catálogo, galería, productos o servicios.</p>
+                </div>
+                <div>
+                    <span class="tag purple">Página 3</span>
+                    <p><strong>Complementaria:</strong> contacto, información adicional, formulario o comunidad.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h3>🏗️ B. Organización obligatoria de carpetas</h3>
+            <p>Todos los proyectos deberán respetar una estructura organizada de archivos y directorios. No se aceptarán proyectos que tengan todos sus archivos mezclados en una sola carpeta.</p>
+
+            <div class="codebox"><span class="folder">MiSitioWeb/</span>
+│
+├── <span class="folder-file">index.html</span>       <span class="folder-comment"># Página principal (obligatoria)</span>
+├── <span class="folder-file">nosotros.html</span>    <span class="folder-comment"># Segunda página</span>
+├── <span class="folder-file">contacto.html</span>    <span class="folder-comment"># Tercera página</span>
+│
+├── <span class="folder">CSS/</span>
+│   └── <span class="folder-file">styles.css</span>     <span class="folder-comment"># Hojas de estilos</span>
+│
+├── <span class="folder">JS/</span>
+│   └── <span class="folder-file">script.js</span>      <span class="folder-comment"># Scripts (si se implementan)</span>
+│
+└── <span class="folder">assets/</span>
+    │
+    ├── <span class="folder">img/</span>          <span class="folder-comment"># Imágenes</span>
+    ├── <span class="folder">audio/</span>        <span class="folder-comment"># Archivos de audio</span>
+    └── <span class="folder">video/</span>        <span class="folder-comment"># Archivos de video</span></div>
+
+            <div class="warning">
+                <p><strong>¡Ojo!</strong> El archivo <strong>index.html debe permanecer en la raíz del repositorio</strong>, no dentro de otra carpeta. Las carpetas CSS, JS y assets también deberán estar en ese mismo nivel.</p>
+            </div>
+
+            <p>Las tres páginas HTML deberán permanecer en la raíz. Los archivos CSS se guardarán dentro de CSS, los scripts dentro de JS y los recursos multimedia dentro de su correspondiente subcarpeta de assets.</p>
+
+            <p>También deberás utilizar rutas relativas correctas para conectar tus páginas con los estilos, scripts e imágenes.</p>
+
+            <div class="codebox"><span class="folder-comment"># Ejemplos de rutas desde index.html</span>
+&lt;link rel="stylesheet" href="CSS/styles.css"&gt;
+
+&lt;script src="JS/script.js"&gt;&lt;/script&gt;
+
+&lt;img src="assets/img/imagen.jpg" alt="Descripción"&gt;
+
+<span class="folder-comment"># Navegación entre páginas</span>
+&lt;a href="nosotros.html"&gt;Nosotros&lt;/a&gt;</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">03</span>
+            <h2>Implementación de HTML</h2>
+        </div>
+
+        <p>Se deberán integrar los elementos HTML que revisamos durante el curso. Cada elemento deberá utilizarse de acuerdo con su propósito y contexto.</p>
+
+        <div class="panel">
+            <h3>Organización y estructura</h3>
+            <span class="tag">main</span>
+            <span class="tag">section</span>
+            <span class="tag">div</span>
+            <span class="tag">nav</span>
+            <span class="tag">footer</span>
+
+            <h3>Texto y encabezados</h3>
+            <span class="tag">h1-h6</span>
+            <span class="tag">p</span>
+            <span class="tag">small</span>
+            <span class="tag">strong</span>
+            <span class="tag">em</span>
+            <span class="tag">mark</span>
+            <span class="tag">abbr</span>
+
+            <h3>Listas, tablas y contenido</h3>
+            <span class="tag">ol</span>
+            <span class="tag">ul</span>
+            <span class="tag">dl</span>
+            <span class="tag">table</span>
+            <span class="tag">img</span>
+            <span class="tag">a</span>
+
+            <h3>Formularios e interacción</h3>
+            <span class="tag">input</span>
+            <span class="tag">textarea</span>
+            <span class="tag">button</span>
+            <span class="tag">select</span>
+
+            <h3>Formato y configuración</h3>
+            <span class="tag">hr</span>
+            <span class="tag">br</span>
+            <span class="tag">code</span>
+            <span class="tag">pre</span>
+            <span class="tag">meta</span>
+            <span class="tag">link</span>
+
+            <h3>Identificación y organización</h3>
+            <span class="tag purple">class</span>
+            <span class="tag purple">id</span>
+            <span class="tag purple">Etiquetas HTML</span>
+
+            <div class="highlight">
+                <p><strong>Importante:</strong> no es necesario utilizar absolutamente todas las etiquetas en un mismo proyecto. Lo que se evaluará es que las utilices correctamente y que tengan sentido dentro del sitio web.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">04</span>
+            <h2>Implementación de CSS</h2>
+        </div>
+
+        <p>El diseño visual deberá realizarse mediante una hoja de estilos CSS propia, vinculada correctamente a las páginas HTML.</p>
+
+        <div class="panel">
+            <h3>Propiedades y recursos revisados</h3>
+            <div class="two-columns">
+                <div>
+                    <span class="tag">background</span>
+                    <span class="tag">bgcolor</span>
+                    <span class="tag">color</span>
+                    <span class="tag">text-align</span>
+                </div>
+                <div>
+                    <span class="tag">margin</span>
+                    <span class="tag">padding</span>
+                    <span class="tag">border-radius</span>
+                    <span class="tag">width</span>
+                    <span class="tag">height</span>
+                </div>
+                <div>
+                    <span class="tag">display: flex</span>
+                    <span class="tag">:hover</span>
+                    <span class="tag">class</span>
+                    <span class="tag">id</span>
+                </div>
+            </div>
+
+            <h3>Tipografía con Google Fonts</h3>
+            <p>También deberás personalizar la tipografía de tu sitio web utilizando fuentes externas de <strong>Google Fonts</strong>, integradas mediante CSS o mediante el enlace correspondiente en HTML.</p>
+            <p>La elección de fuentes deberá ser coherente con la identidad visual del proyecto. No basta con cambiar la fuente: debes saber explicar cómo la importaste y cómo la aplicaste a los elementos de tu página.</p>
+
+            <h3>Diseño personalizado</h3>
+            <ul>
+                <li>Utilizar una paleta de colores definida.</li>
+                <li>Establecer jerarquías visuales mediante tamaños y estilos de texto.</li>
+                <li>Aplicar márgenes y rellenos para organizar los elementos.</li>
+                <li>Diseñar menús, botones y secciones con estilos propios.</li>
+                <li>Utilizar Flexbox para distribuir elementos cuando sea conveniente.</li>
+                <li>Incorporar efectos visuales e interacciones mediante pseudoclases como <code>:hover</code>.</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>El diseño importa:</strong> no se aceptará un sitio que conserve únicamente la apariencia predeterminada del navegador. Deberás demostrar que puedes controlar la presentación visual mediante CSS.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">05</span>
+            <h2>Investigación y conocimientos adicionales</h2>
+        </div>
+
+        <p>¡Aquí puedes lucirte! Se permite investigar e implementar propiedades, etiquetas, técnicas o recursos que no hayamos revisado directamente en clase.</p>
+
+        <p>Algunos ejemplos de elementos que podrías investigar:</p>
+
+        <div class="two-columns">
+            <div class="panel">
+                <h3>HTML</h3>
+                <ul>
+                    <li>Etiquetas semánticas adicionales.</li>
+                    <li>Audio y video.</li>
+                    <li>Formularios más elaborados.</li>
+                    <li>Otros atributos HTML.</li>
+                </ul>
+            </div>
+            <div class="panel">
+                <h3>CSS</h3>
+                <ul>
+                    <li>Animaciones y transiciones.</li>
+                    <li>Grid Layout.</li>
+                    <li>Sombras y gradientes.</li>
+                    <li>Diseño responsivo.</li>
+                    <li>Variables CSS.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="warning">
+            <p><strong>La regla es sencilla:</strong> todo lo adicional que implementes y puedas explicar o justificar será tomado en cuenta como mérito adicional. Sin embargo, no se otorgará valor adicional por copiar código avanzado que no puedas explicar.</p>
+        </div>
+
+        <p>Si incorporas una técnica nueva, deberás poder responder:</p>
+        <ol>
+            <li>¿Qué hace?</li>
+            <li>¿Cómo funciona?</li>
+            <li>¿Por qué decidiste utilizarla?</li>
+            <li>¿En qué parte de tu proyecto la implementaste?</li>
+        </ol>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">06</span>
+            <h2>Publicación en GitHub Pages</h2>
+        </div>
+
+        <p>Tu proyecto deberá estar disponible públicamente en Internet mediante GitHub Pages.</p>
+
+        <div class="panel">
+            <h3>Requisitos de publicación</h3>
+            <ol>
+                <li>Crear un repositorio en GitHub para el proyecto.</li>
+                <li>Subir todos los archivos y carpetas respetando la estructura solicitada.</li>
+                <li>Verificar que el archivo index.html se encuentre en la raíz.</li>
+                <li>Configurar GitHub Pages desde la sección Settings del repositorio.</li>
+                <li>Seleccionar la rama y carpeta de publicación correspondientes.</li>
+                <li>Comprobar que el sitio se encuentre publicado correctamente.</li>
+                <li>Verificar que las tres páginas funcionen desde la versión publicada.</li>
+            </ol>
+        </div>
+
+        <div class="highlight">
+            <p><strong>¡Atención!</strong> No basta con que el repositorio exista o que el código esté subido. El sitio deberá estar publicado y funcionar correctamente desde su enlace de GitHub Pages.</p>
+        </div>
+
+        <p>Comprueba especialmente:</p>
+        <ul>
+            <li>Que los enlaces entre páginas funcionen.</li>
+            <li>Que las imágenes y recursos multimedia carguen.</li>
+            <li>Que los estilos CSS se apliquen correctamente.</li>
+            <li>Que las rutas funcionen en GitHub Pages.</li>
+            <li>Que no existan errores evidentes de navegación o visualización.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">07</span>
+            <h2>Entregables</h2>
+        </div>
+
+        <p>La entrega deberá contener los siguientes elementos:</p>
+
+        <div class="panel">
+            <h3>📦 1. Repositorio de GitHub</h3>
+            <p>Enlace público al repositorio que contiene todos los archivos del proyecto.</p>
+
+            <h3>🌍 2. Sitio web publicado</h3>
+            <p>Enlace directo a tu sitio funcionando mediante GitHub Pages.</p>
+
+            <h3>📸 3. Evidencia del funcionamiento</h3>
+            <p>Capturas de pantalla de las tres páginas del sitio web ya publicadas.</p>
+
+            <h3>📝 4. Explicación técnica</h3>
+            <p>Un documento breve que incluya:</p>
+            <ul>
+                <li>Nombre y temática del proyecto.</li>
+                <li>Propósito y descripción del sitio.</li>
+                <li>Función de cada una de las tres páginas.</li>
+                <li>Etiquetas HTML más importantes que utilizaste.</li>
+                <li>Propiedades CSS que implementaste.</li>
+                <li>Fuentes de Google Fonts utilizadas y cómo las integraste.</li>
+                <li>Elementos adicionales investigados y explicación de su funcionamiento.</li>
+            </ul>
+
+            <h3>🧠 5. Defensa técnica individual</h3>
+            <p>Deberás estar preparado para explicar el funcionamiento de tu proyecto y responder preguntas sobre el código que desarrollaste.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">08</span>
+            <h2>Criterios de evaluación</h2>
+        </div>
+
+        <p>El proyecto será evaluado considerando tanto su calidad técnica como el resultado visual y el dominio de los conocimientos implementados.</p>
+
+        <div class="panel" style="padding:10px;overflow-x:auto;">
+            <table class="criteria">
+                <thead>
+                    <tr>
+                        <th>Criterio</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Estructura y organización de las tres páginas HTML.</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Implementación y uso adecuado de HTML.</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Diseño visual e implementación de CSS.</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td>Navegación, enlaces y funcionamiento del sitio.</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Publicación y funcionamiento en GitHub Pages.</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Explicación técnica y dominio del código.</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>TOTAL</td>
+                        <td>100%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="highlight">
+            <p><strong>Sobre los elementos adicionales:</strong> la investigación, implementación y explicación de recursos que no se revisaron en clase podrán considerarse como mérito adicional dentro de la valoración del proyecto. Su incorporación no sustituye ninguno de los requisitos obligatorios.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <span class="number">09</span>
+            <h2>Consideraciones finales</h2>
+        </div>
+
+        <ul class="checklist">
+            <li>El proyecto deberá ser de autoría propia.</li>
+            <li>Se permite consultar documentación y tutoriales.</li>
+            <li>Se permite utilizar inteligencia artificial como herramienta de apoyo.</li>
+            <li>Todo código implementado deberá poder ser explicado por el estudiante.</li>
+            <li>No se aceptarán proyectos con páginas incompletas o enlaces rotos.</li>
+            <li>La estructura de carpetas deberá respetarse.</li>
+            <li>El repositorio y el sitio publicado deberán ser accesibles.</li>
+            <li>Se evaluará tanto el resultado como el proceso y los conocimientos demostrados.</li>
+        </ul>
+    </section>
+
+    <div class="panel" style="text-align:center;border-color:#8b5cf655;background:linear-gradient(135deg,#292044,#192940);padding:28px;">
+        <div style="font-size:35px;">🚀</div>
+        <h2 style="color:white;margin:10px 0;">¡Es momento de construir!</h2>
+        <p style="color:#d1d5e5;">Tienes los conocimientos, las herramientas y la libertad creativa. Ahora toca convertir una idea en un sitio web real.</p>
+        <p style="color:#c4b5fd;font-weight:800;">Diseña. Programa. Publica. Demuestra lo que sabes.</p>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <strong>TAEV · PROGRAMACIÓN WEB</strong>
+    <p>Integradora II · Desarrollo de un sitio web</p>
+    <p>HTML + CSS + GitHub Pages</p>
+</footer>
+</div>
